@@ -41,11 +41,24 @@ Proje'yi başlatmak için aşağıdaki adımları izleyin.
     php artisan serve
     ```
    
-6. Client oluşturun:
+7. Client oluşturun:
    ```bash
     php artisan passport:client --password
     ```
    
-7. Bir kullanıcı oluşturun:
+8. Bir kullanıcı oluşturun:
    
    /users/create linki üzerinden ulaşabilirsiniz.
+
+
+
+9. İzinler
+
+    İzinler ile ilgili problemler mevcut olursa storage/framework/ klasörü içerisine sessions ve views klasörleri oluşturulmalı. View path ile iligli bir sorun olması durumunda config->view.php dosyasında compiled alanında realpath fonksiyonu kaldırılmalı.
+   Ekstra sorunlar için
+
+   ```bash
+    php artisan config:clear
+    php artisan route:clear
+    php artisan view:clear
+    ```
